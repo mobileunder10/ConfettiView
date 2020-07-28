@@ -54,7 +54,7 @@ public struct ConfettiView: UIViewRepresentable {
   
   func makeEmitterCell(color: UIColor) -> CAEmitterCell {
     let cell = CAEmitterCell()
-    cell.contents = UIImage(named: type.imageName)?.cgImage
+    cell.contents = UIImage(named: type.imageName, in: .module, with: nil)?.cgImage
     cell.color = color.cgColor
     cell.birthRate = 40.0
     cell.lifetime = 20.0
